@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     display: flex;
     align-items: center;
+    justify-items: flex-start;
     width: 100vw;
     height: calc(100vh + 5vmin);
 
@@ -137,17 +138,42 @@ h1, h2, h3, h4, h5, h6 {
     mask-position: left top, left bottom;
 }
 
+.hero-image {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 100vmax;
+    height: 100vmax;
+
+    background: white;
+    overflow: hidden;
+    transform: translate(-60%, -60%) rotate(-60deg);
+}
+
+.profile-pic {
+    position: absolute;
+    height: 100vh;
+    object-fit: scale-down;
+    margin: 0;
+    top: 0;
+    right: 0;
+
+    -webkit-clip-path: polygon(calc(70vw - (100vw - 100%)) 0, 100% 0, 100% 100%, calc(55vw - (100vw - 100%)) 100%);
+    clip-path: polygon(calc(70vw - (100vw - 100%)) 0, 100% 0, 100% 100%, calc(55vw - (100vw - 100%)) 100%);
+}
+
 .hero-content {
     box-sizing: border-box;
     z-index: 1;
     max-width: 2000px;
     max-height: calc(80vh - 10vmin);
-    margin: 0 auto;
     color: white;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .hero-name {
@@ -175,18 +201,11 @@ hr.hero-separator {
     position: relative;
     flex-direction: column;
     margin-left: 4rem;
+    max-width: 55vw;
 }
 
 .hero-bio-index {
     display: flex;
-}
-
-.profile-pic {
-    max-width: 100%;
-    max-height: 50vh;
-    border-radius: 50%;
-    flex-grow: 0;
-    border: 0.2rem solid white;
 }
 
 .profile-bio {
