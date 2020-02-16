@@ -2,6 +2,9 @@ body {
     height: 200vh;
     margin: 0;
     font-family: 'Quicksand', sans-serif;
+
+    --profile-top-x: 70vw;
+    --profile-bottom-x: 55vw;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100vw;
     height: calc(100vh + 5vmin);
 
-    background: linear-gradient(137deg, #6dc0d9 0%, #5b8bce 50%, #6dd97f 100%);
+    background: linear-gradient(180deg, #6dc0d9 0%, #5b8bce 50%, #6dd97f 100%);
     background-size: 200% 200%;
 
     /*-webkit-animation: HeroGradientAnimation 12s ease infinite;
@@ -32,7 +35,8 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     bottom: 0;
 
-    width: calc(50vw - 5vmin);
+    /*width: calc(50vw - 5vmin);*/
+    width: 50vw;
     height: 5vmin;
 
     background: linear-gradient(to bottom, #C1C1C1 0%, #FFFFFF 7%, #FFFFFF 100%);
@@ -56,10 +60,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-header-base-right {
     position: absolute;
-    left: calc(50vw + 5vmin);
+    /*left: calc(50vw + 5vmin);*/
+    left: calc(50vw);
     bottom: 0;
 
-    width: calc(50vw - 5vmin);
+    /*width: calc(50vw - 5vmin);*/
+    width: calc(50vw);
     height: 5vmin;
 
     background: linear-gradient(to bottom, #C1C1C1 0%, #FFFFFF 7%, #FFFFFF 100%);
@@ -160,8 +166,17 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     right: 0;
 
-    -webkit-clip-path: polygon(calc(70vw - (100vw - 100%)) 0, 100% 0, 100% 100%, calc(55vw - (100vw - 100%)) 100%);
-    clip-path: polygon(calc(70vw - (100vw - 100%)) 0, 100% 0, 100% 100%, calc(55vw - (100vw - 100%)) 100%);
+    -webkit-clip-path: polygon(calc(var(--profile-top-x) - (100vw - 100%)) 0, 100% 0, 100% 100%, calc(var(--profile-bottom-x) - (100vw - 100%)) 100%);
+    clip-path: polygon(calc(var(--profile-top-x) - (100vw - 100%)) 0, 100% 0, 100% 100%, calc(var(--profile-bottom-x) - (100vw - 100%)) 100%);
+}
+
+.image-separator {
+    width: 3px;
+    background: white;
+    height: 100vh;
+    position: absolute;
+    left: 62vw;
+    z-index: 10;
 }
 
 .hero-content {
@@ -201,7 +216,7 @@ hr.hero-separator {
     position: relative;
     flex-direction: column;
     margin-left: 4rem;
-    max-width: 55vw;
+    max-width: var(--profile-bottom-x);
 }
 
 .hero-bio-index {
@@ -257,9 +272,14 @@ hr.hero-separator {
 
     .hero-content-body {
         margin-left: 0;
+        max-width: 100vw; 
     }
 
     .profile-pic {
+        display: none;
+    }
+
+    .image-separator {
         display: none;
     }
 }
