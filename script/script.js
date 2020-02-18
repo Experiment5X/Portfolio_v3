@@ -25,7 +25,7 @@ function setImageSeparatorAngle() {
     const yOffset = hypot / 2 - (hypot / 2) * Math.cos(angleRad);
 
     $('.image-separator').css('transform', `rotate(${angle}deg) translateY(-${yOffset}px`);
-    $('.image-separator').css('height', `${hypot * 1.1}px`);
+    $('.image-separator').css('height', `${hypot * 1.13}px`);
     console.log('Angle: ', angle);
 }
 
