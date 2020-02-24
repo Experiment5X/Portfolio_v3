@@ -37,8 +37,8 @@ $(document).ready(() => {
     $('.hero-index-item-link').on('click', function(event) {
         const sectionToScrollTo = $(event.target).attr('x-link-for');
         $([document.documentElement, document.body]).animate({
-            scrollTop: $(sectionToScrollTo).offset().top
-        }, 1500);
+            scrollTop: $(sectionToScrollTo).offset().top - 5
+        }, 500);
     });
 
     setImageSeparatorAngle();

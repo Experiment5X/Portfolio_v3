@@ -338,17 +338,17 @@ hr.hero-separator {
 }
 
 .content-section-title-container {
-    background: linear-gradient(90deg, #6dc0d9 0%, #5b8bce 50%, #6dd97f 100%);
+    background: #5cabdb;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 
     position: relative;
-    height: 6rem;
+    height: 4rem;
     box-sizing: border-box;
 
     /*clip-path: polygon(calc(var(--profile-top-x) - (100vw - 100%)) 0, 100% 0, 100% 100%, calc(var(--profile-bottom-x) - (100vw - 100%)) 100%);*/
-    clip-path: polygon(0 2rem, 2rem 0, 100% 0, calc(100% - 6rem) 100%, 0 100%);
+    clip-path: polygon(0 2rem, 2rem 0, 100% 0, 100% 2rem, calc(100% - 2rem) 100%, 0 100%);
 }
 
 .content-section-title-pattern {
