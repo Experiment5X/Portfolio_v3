@@ -490,3 +490,28 @@ hr.hero-separator {
     justify-self: end;
     align-self: center;
 }
+
+footer {
+    background-color: #ddd;
+    height: 15rem;
+    border-top: 5px solid white;
+    position: relative;
+}
+
+footer:before {
+    --footer-icon-size: 3rem;
+
+    position: absolute;
+    left: calc(50% - var(--footer-icon-size));
+    top: calc(var(--footer-icon-size) / -2);
+
+    height: var(--footer-icon-size);
+    width: var(--footer-icon-size);
+
+    background-color: #ddd;
+    border: 3px solid white;
+    border-radius: 50%;
+
+
+    content: '';
+}

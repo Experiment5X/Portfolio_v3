@@ -1,0 +1,12 @@
+{
+  "name": "Portfolio_v3",
+  "version": "1.0.0",
+  "description": "A portfolio website for myself",
+  "main": "index.html",
+  "author": "<xmeadamx@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "mkdir -p ./build && pug html --out build && cp -R ./style ./build && cp -R ./script ./build && cp -R ./images ./build",
+    "clean": "rm -rf ./build"
+  }
+}
