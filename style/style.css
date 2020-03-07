@@ -2,6 +2,7 @@ body {
     height: 200vh;
     margin: 0;
     font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
 
     --profile-top-x: 70vw;
     --profile-bottom-x: 55vw;

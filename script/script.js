@@ -24,13 +24,31 @@ function setImageSeparatorAngle() {
 
     const yOffset = hypot / 2 - (hypot / 2) * Math.cos(angleRad);
 
-    $('.image-separator').css('transform', `rotate(${angle}deg) translateY(-${yOffset}px`);
+    $('.image-separator').css('transform', `rotate(${angle}deg) translateY(-${yOffset}px)`);
     $('.image-separator').css('height', `${hypot * 1.13}px`);
-    console.log('Angle: ', angle);
+}
+
+function setProfileImageProperties() {
+    const translateX = (window.innerHeight / window.innerWidth - 0.55) * window.innerWidth / 2;
+    if (translateX > 0) {
+        const clipPath = `polygon(calc(var(--profile-top-x) - (100vw - 100%) - ${translateX}px) 0,
+                                calc(100% - ${translateX}px) 0,
+                                calc(100% - ${translateX}px) 100%,
+                                calc(var(--profile-bottom-x) - (100vw - 100%) - ${translateX}px) 100%
+                        )`
+        console.log('Translation: ' + translateX);
+        console.log('Height / width: ' + (window.innerHeight / window.innerWidth));
+
+        $('.profile-pic').css('transform', `translateX(${translateX}px)`);
+        $('.profile-pic').css('clip-path', clipPath);
+        $('.profile-pic').css('-webkit-clip-path', clipPath);
+        $('.profile-pic').css('shape-outside', clipPath);
+    }
 }
 
 window.onresize = (event) => {
     setImageSeparatorAngle();
+    setProfileImageProperties();
 }
 
 $(document).ready(() => {
@@ -42,4 +60,5 @@ $(document).ready(() => {
     });
 
     setImageSeparatorAngle();
+    setProfileImageProperties();
 });
