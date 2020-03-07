@@ -36,7 +36,6 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     bottom: 0;
 
-    /*width: calc(50vw - 5vmin);*/
     width: 50vw;
     height: 5vmin;
 
@@ -61,11 +60,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-header-base-right {
     position: absolute;
-    /*left: calc(50vw + 5vmin);*/
+    left: calc(50vw + 5vmin);
     left: calc(50vw);
     bottom: 0;
 
-    /*width: calc(50vw - 5vmin);*/
+    width: calc(50vw - 5vmin);
     width: calc(50vw);
     height: 5vmin;
 
@@ -171,6 +170,20 @@ h1, h2, h3, h4, h5, h6 {
     clip-path: polygon(calc(var(--profile-top-x) - (100vw - 100%)) 0, 100% 0, 100% 100%, calc(var(--profile-bottom-x) - (100vw - 100%)) 100%);
 }
 
+.profile-pic-small-container {
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    margin: 2rem 0 3rem 0;
+}
+
+.profile-pic-small {
+    border-radius: 50%;
+    border: 3px solid white;
+    height: 35vh;
+}
+
 .image-separator {
     width: 3px;
     background: white;
@@ -273,11 +286,19 @@ hr.hero-separator {
     .footer-content-item {
         margin-bottom: 2rem !important;
     }
+
+    .profile-pic-small-container {
+        margin-bottom: 0;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
     .content-container {
         padding: 2rem 2rem !important;
+    }
+
+    .hero-header-base-left {
+        width: calc(50vw - 5vmin);
     }
 
     .hero-content-body {
@@ -291,6 +312,14 @@ hr.hero-separator {
 
     .image-separator {
         display: none;
+    }
+
+    .profile-pic-small-container {
+        display: flex;
+    }
+
+    .hero-header {
+        flex-direction: column;
     }
 }
 
