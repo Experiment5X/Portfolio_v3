@@ -268,8 +268,24 @@ hr.hero-separator {
 }
 
 @media only screen and (max-width: 850px) {
+    .hero-name {
+        text-align: center;
+    }
+    
     .hero-content {
         padding: 2rem;
+    }
+
+    .hero-content-body {
+        align-items: center;
+    }
+
+    .hero-index {
+        align-items: center;
+    }
+
+    .hero-index-item-bullet {
+        display: none;
     }
 
     .profile-bio {
@@ -296,7 +312,7 @@ hr.hero-separator {
 
 @media only screen and (max-width: 1200px) {
     .content-container {
-        padding: 2rem 2rem !important;
+        padding: 2rem 2rem;
     }
 
     .hero-header-base-left {
@@ -324,6 +340,13 @@ hr.hero-separator {
         flex-direction: column;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .content-container {
+        padding: 2rem 0.5rem;
+    }
+}
+
 
 .hero-index {
     display: flex;
