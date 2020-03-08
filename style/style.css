@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-items: flex-start;
     width: 100vw;
-    height: calc(100vh + var(--chevron-size));
+    height: 100vh;
 
     background: linear-gradient(180deg, #6dc0d9 0%, #5b8bce 50%, #6dd97f 100%);
     background-size: 200% 200%;
@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-header-base-left {
+    display: none;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -61,13 +62,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-header-base-right {
+    display: none;
     position: absolute;
     left: calc(50vw + var(--chevron-size));
-    left: calc(50vw);
     bottom: 0;
 
     width: calc(50vw - var(--chevron-size));
-    width: calc(50vw);
     height: var(--chevron-size);
 
     background: linear-gradient(to bottom, #C1C1C1 0%, #FFFFFF 7%, #FFFFFF 100%);
@@ -191,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
     background: white;
     height: 100vh;
     position: absolute;
-    left: 62vw;
+    left: 62.5vw;
     z-index: 10;
 }
 
@@ -320,8 +320,17 @@ hr.hero-separator {
         padding: 2rem 2rem;
     }
 
+    .hero-header {
+        height: calc(100vh + var(--chevron-size));
+    }
+
+    .hero-header-base-right {
+        display: block;
+    }
+
     .hero-header-base-left {
         width: calc(50vw - var(--chevron-size));
+        display: block;
     }
 
     .hero-name {
@@ -404,18 +413,18 @@ hr.hero-separator {
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    cursor: pointer;
     font-family: 'Ubuntu Mono', monospace;
     font-weight: lighter;
 }
 
 .hero-index-item-bullet {
     margin-right: 0.25rem;
-    font-size: 0.25rem;
+    font-size: 1.25vh;
 }
 
 .hero-index-item-link {
     text-decoration: none;
+    cursor: pointer;
     color: white;
     font-size: 5vh;
     display: flex;
