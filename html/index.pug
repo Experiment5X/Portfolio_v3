@@ -2,6 +2,7 @@ head
   link(href='https://fonts.googleapis.com/css?family=Comfortaa&display=swap' rel='stylesheet')
   link(href='https://fonts.googleapis.com/css?family=Quicksand&display=swap' rel='stylesheet')
   link(href='https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap' rel='stylesheet')
+  link(href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet")
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css' integrity='sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=' crossorigin='anonymous')
   link(rel='stylesheet' href='style/style.css')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
@@ -18,22 +19,21 @@ head
       h1.hero-name Adam Spindler
       h2.hero-title I like programs
       hr.hero-separator
-      .hero-bio-index
-        .hero-index
-          .hero-index-item
-            .hero-index-item-link(x-link-for='#work')
-              i.hero-index-item-bullet.fas.fa-dot-circle
-              | Work
-          .hero-index-item
-            .hero-index-item-link(x-link-for='#school')
-              i.hero-index-item-bullet.fas.fa-dot-circle
-              | School
-          .hero-index-item
-            .hero-index-item-link(x-link-for='#projects')
-              i.hero-index-item-bullet.fas.fa-dot-circle
-              | Projects
-        .profile-content-item.profile-bio(style='display: none')
-          | Nulla facilisi. Suspendisse potenti. Vivamus convallis lacus elit, non sagittis lorem convallis id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum neque pharetra rutrum sagittis. Fusce a dolor eget purus viverra dignissim a a nulla. Ut mattis nibh eu nisl sodales, quis fermentum lectus egestas. Suspendisse potenti. Curabitur ultricies, risus vel interdum tincidunt, nisl sem ullamcorper magna, et sollicitudin justo dolor nec mauris. Morbi quis ante sit amet quam pulvinar fermentum. Aenean sit amet sagittis lectus.
+      .hero-index
+        .hero-index-item
+          .hero-index-item-link(x-link-for='#work')
+            i.hero-index-item-bullet.fas.fa-dot-circle
+            | Work
+        .hero-index-item
+          .hero-index-item-link(x-link-for='#school')
+            i.hero-index-item-bullet.fas.fa-dot-circle
+            | School
+        .hero-index-item
+          .hero-index-item-link(x-link-for='#projects')
+            i.hero-index-item-bullet.fas.fa-dot-circle
+            | Projects
+      .profile-content-item.profile-bio(style='display: none')
+        | Nulla facilisi. Suspendisse potenti. Vivamus convallis lacus elit, non sagittis lorem convallis id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum neque pharetra rutrum sagittis. Fusce a dolor eget purus viverra dignissim a a nulla. Ut mattis nibh eu nisl sodales, quis fermentum lectus egestas. Suspendisse potenti. Curabitur ultricies, risus vel interdum tincidunt, nisl sem ullamcorper magna, et sollicitudin justo dolor nec mauris. Morbi quis ante sit amet quam pulvinar fermentum. Aenean sit amet sagittis lectus.
     .hero-header-base-left
     .hero-header-base-right
   .image-separator
@@ -49,7 +49,7 @@ head
   section#work.content-section
     .content-section-title-container
       .content-section-title-pattern
-      .content-section-title Work Experience
+      .content-section-title Work
     section.content-section-body
       section.experience-block
         .experience-block-title Tesla
