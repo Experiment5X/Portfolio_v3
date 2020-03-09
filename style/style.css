@@ -262,6 +262,10 @@ hr.hero-separator {
     .content-container {
         padding: 2rem 6rem;
     }
+
+    .hero-index-item-link {
+        font-size: max(2rem, 5vmin);
+    }
 }
 
 @media only screen and (max-width: 850px) {
@@ -291,6 +295,10 @@ hr.hero-separator {
 
     .hero-index {
         align-items: center;
+    }
+
+    .hero-index-item-link {
+        font-size: max(2rem, 7vmin);
     }
 
     .hero-index-item-bullet {
@@ -430,7 +438,6 @@ hr.hero-separator {
     text-decoration: none;
     cursor: pointer;
     color: white;
-    font-size: max(2rem, 7vmin);
     display: flex;
     align-items: center;
 }
