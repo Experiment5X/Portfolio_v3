@@ -443,6 +443,18 @@ hr.hero-separator {
     color: white;
 }
 
+.content-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-header {
+    display: flex;
+    flex-direction: column;
+    width: min(850px, 75vw);
+}
+
 .content-section {
     margin-bottom: 3rem;
 }
