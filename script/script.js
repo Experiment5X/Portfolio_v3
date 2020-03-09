@@ -46,10 +46,10 @@ function setProfileImageProperties() {
     }
 }
 
-window.onresize = (event) => {
+$(window).resize((event) => {
     setImageSeparatorAngle();
     setProfileImageProperties();
-}
+});
 
 $(document).ready(() => {
     $('.hero-index-item-link').on('click', function(event) {
