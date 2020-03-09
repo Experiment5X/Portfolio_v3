@@ -277,8 +277,12 @@ hr.hero-separator {
         align-items: center;
     }
 
+    .hero-title {
+        display: none;
+    }
+
     .hero-name {
-        font-size: 15vw !important;
+        font-size: 14vmin !important;
     }
 
     .hero-separator {
@@ -401,7 +405,7 @@ hr.hero-separator {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: min(max(25vh, 8rem), 20rem);
+    height: max(10rem, 24vmin);
 }
 
 .hero-index-item:first-child {
@@ -426,7 +430,7 @@ hr.hero-separator {
     text-decoration: none;
     cursor: pointer;
     color: white;
-    font-size: 5vh;
+    font-size: max(2rem, 7vmin);
     display: flex;
     align-items: center;
 }
