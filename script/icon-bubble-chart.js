@@ -26,22 +26,26 @@ $(document).ready(() => {
                     .attr('class', 'language')
                     .attr('width', d => 2 * calcRadiusScale()(d.score) * Math.sqrt(1 / 2))
                     .attr('height', d => 2 * calcRadiusScale()(d.score) * Math.sqrt(1 / 2))
-                    .on('mouseover', languageClicked);
+                    .on('mouseover', languageClicked)
+                    .on('mouseleave', () => languageClicked({}));
 
                 // setup the forces
-                const forceStrength = 0.05
+                const forceStrength = 0.0005
                 const simulation = d3.forceSimulation()
                     .force('x', d3.forceX(width / 2).strength(forceStrength))
                     .force('y', d3.forceY(height / 2).strength(forceStrength))
-                    .force('collide', d3.forceCollide(d => calcRadiusScale()(Math.sqrt(2) * d.score)));
+                    .force('radial', d3.forceRadial(1))
+                    .force('collide', d3.forceCollide(d => calcRadiusScale()(Math.sqrt(2) * d.score)))
+                    .alphaDecay(0.3)
 
                 // update the circle positions when the simulation changes their positions
                 simulation.nodes(data).on('tick', () => {
-                    circles.attr('transform', d => `translate(${d.x}, ${d.y})`)
+                    circles.attr('transform', d => `translate(${d.x - calcRadiusScale()(Math.sqrt(2) * d.score) + width / 2}, ${d.y - calcRadiusScale()(Math.sqrt(2) * d.score) + height / 2})`)
                 });
 
                 simulation.force('x').initialize(data);
                 simulation.force('y').initialize(data);
+                simulation.force('radial').initialize(data);
                 simulation.force('collide').initialize(data);
 
             };

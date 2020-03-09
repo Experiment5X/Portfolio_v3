@@ -455,6 +455,10 @@ hr.hero-separator {
     width: min(850px, 75vw);
 }
 
+.language {
+    cursor: pointer;
+}
+
 .content-section {
     margin-bottom: 3rem;
 }
