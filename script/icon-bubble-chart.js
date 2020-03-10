@@ -26,8 +26,8 @@ $(document).ready(() => {
                     .attr('class', 'language')
                     .attr('width', d => 2 * calcRadiusScale()(d.score) * Math.sqrt(1 / 2))
                     .attr('height', d => 2 * calcRadiusScale()(d.score) * Math.sqrt(1 / 2))
-                    .on('mouseover', languageClicked)
-                    .on('mouseleave', () => languageClicked({}));
+                    //.on('mouseover', languageClicked)
+                    //.on('mouseleave', () => languageClicked({}));
 
                 // setup the forces
                 const forceStrength = 0.0005
