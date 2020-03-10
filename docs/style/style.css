@@ -14,6 +14,16 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Ubuntu Mono', monospace;
 }
 
+a {
+    text-decoration: none;
+    color: #056ead;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #056ead;
+}
+
 
 /* animation from https://www.gradient-animator.com/ */
 
@@ -540,6 +550,7 @@ hr.hero-separator {
     font-size: 1.1rem;
     font-weight: bold;
     font-family: 'Comfortaa', cursive;
+    margin-bottom: 0.3rem;
 }
 
 .experience-block-paragraph {
@@ -638,6 +649,11 @@ hr.hero-separator {
 .education-gpa {
     justify-self: end;
     align-self: center;
+}
+
+.experience-project-block-title {
+    display: flex;
+    justify-content: space-between;
 }
 
 footer {
