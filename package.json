@@ -6,7 +6,7 @@
   "author": "<xmeadamx@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "mkdir -p ./build && pug html --out build && cp -R ./style ./build && cp -R ./script ./build && cp -R ./images ./build",
-    "clean": "rm -rf ./build"
+    "build": "mkdir -p ./docs && pug html --out docs && cp -R ./style ./docs && cp -R ./script ./docs && cp -R ./images ./docs",
+    "clean": "rm -rf ./docs"
   }
 }
