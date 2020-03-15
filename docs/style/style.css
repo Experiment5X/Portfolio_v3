@@ -173,7 +173,6 @@ a:visited {
 .profile-pic {
     position: absolute;
     height: 100vh;
-    object-fit: scale-down;
     margin: 0;
     top: 0;
     right: 0;
