@@ -43,6 +43,17 @@ a:visited {
     animation: HeroGradientAnimation 12s ease infinite;*/
 }
 
+.hero-header-base-full {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: var(--chevron-size);
+    width: 100%;
+
+    background: linear-gradient(to bottom, #C1C1C1 0%, #FFFFFF 7%, #FFFFFF 100%);
+}
+
 .hero-header-base-left {
     display: none;
     position: absolute;
@@ -253,6 +264,7 @@ hr.hero-separator {
 }
 
 .content-container {
+    position: relative;
     max-width: 1750px;
     margin: 0 auto;
     overflow: hidden;
@@ -343,6 +355,10 @@ hr.hero-separator {
 
     .hero-header {
         height: calc(100vh + var(--chevron-size));
+    }
+
+    .hero-header-base-full {
+        display: none;
     }
 
     .hero-header-base-right {
