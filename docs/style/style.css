@@ -46,7 +46,7 @@ a:visited {
 .hero-header-base-full {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 100vh;
 
     height: var(--chevron-size);
     width: 100%;
