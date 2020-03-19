@@ -479,11 +479,17 @@ hr.hero-separator {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: var(--chevron-size);
 }
 
 .content-header {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.bio {
     width: min(850px, 75vw);
 }
 

@@ -1,7 +1,12 @@
 $(document).ready(() => {
     const setupChart = () => {
         console.log('setting up chart')
-        const size = Math.min(window.innerHeight, window.innerWidth) * 0.4;
+
+        let size = Math.min(window.innerHeight, window.innerWidth) * 0.4
+        if (window.innerWidth < 850) {
+            size = Math.max(window.innerWidth * 0.9, size);
+        }
+
         const width = size;
         const height = size;
 
@@ -83,5 +88,5 @@ $(document).ready(() => {
     }
 
     setupChart();
-    $(window).resize(setupChart);
+    //$(window).resize(setupChart);
 });
