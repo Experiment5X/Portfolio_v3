@@ -8,6 +8,7 @@ head
   link(rel='stylesheet' href='style/style.css')
   script(src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.js" integrity="sha256-BANs9QteeZKuqwQcdddFZlWLLyUCIke5Nn80f8B5G3g=" crossorigin="anonymous")
   script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js', type='text/javascript')
   script(src='./script/script.js' type='text/javascript')
   script(src='./script/icon-bubble-chart.js' type='text/javascript')
   // https://icons8.com/icon/38273/css3
@@ -216,18 +217,22 @@ head
       section.experience-block
         .experience-project-block-title
           .experience-block-title GSC Interpreter
-          a(href='https://github.com/Experiment5X/GscInterpreter') View on GitHub
         .experience-block-paragraph
           | I wrote an interpreter for the game scripting language used in Call of Duty. My tool will act as a syntax checker, with the ability to easily run it on a directory of scripts. It also has the ability to fully interpret a subset of the language. It has support for functions, conditionals, loops, lists, and objects. My interpreter can successfully run mergesort implemented in GSC.
+        a.github-link(href='https://github.com/Experiment5X/GscInterpreter')
+          i.fab.fa-github.github-link-icon
+          | View on GitHub
         section.experience-badge-container
           .experience-badge(x-badge-content='Haskell')
             img.experience-badge-icon(src='./images/tech-icons/haskell.svg')
       section.experience-block
         .experience-project-block-title
           .experience-block-title Garbage Full Detector
-          a(href='https://github.com/Experiment5X/GarbageFullDetector') View on GitHub
         .experience-block-paragraph
           | I built a Raspberry Pi device to detect when my garbage is full by using a deep learning model to classify a picture that the device takes. If someone fills up the garbage without taking it out, the device will send a GIF of them filling it to everyone on a contact list. I gathered training data for this project myself, by taking hundreds of pictures of my garbage can in different conditions. I used Keras for the model, I created a basic web app in NodeJS to configure the device, and used AWS SNS to send people texts to notify them when they're full. 
+        a.github-link(href='https://github.com/Experiment5X/GarbageFullDetector')
+          i.fab.fa-github.github-link-icon
+          | View on GitHub
         section.experience-badge-container
           .experience-badge(x-badge-content='JavaScript')
             img.experience-badge-icon(src='./images/tech-icons/javascript.svg')
@@ -246,9 +251,11 @@ head
       section.experience-block
         .experience-project-block-title
           .experience-block-title Feature Map Viewer
-          a(href='https://github.com/Experiment5X/DeepFeatureVisualizationWebApp') View on GitHub
         .experience-block-paragraph
           | I created this application to visualize feature maps in VGG-16. The application allows you to upload an image and select a layer in VGG-16 to investigate. To visualize the feature map, I start off with an image of noise and perform backpropagation on the input image, continuously updating it until its feature map at the selected layer best matches the feature map of the input image. The user has control over several parameters used to re-create the visualization such as learning rate, gradient std clip, and a total variation coefficient.
+        a.github-link(href='https://github.com/Experiment5X/DeepFeatureVisualizationWebApp')
+          i.fab.fa-github.github-link-icon
+          | View on GitHub
         section.experience-badge-container
           .experience-badge(x-badge-content='Python')
             img.experience-badge-icon(src='./images/tech-icons/python.svg')
@@ -263,9 +270,11 @@ head
       section.experience-block
         .experience-project-block-title
           .experience-block-title Velocity
-          a(href='https://github.com/hetelek/Velocity') View on GitHub
         .experience-block-paragraph
           | I wrote an application with my friend to implement several of the propriety file systems Microsoft uses on the Xbox 360. The file system STFS has security on it to prevent modification, however we were able to bypass these measures to allow modification. To understand how these file systems worked we reverse engineered the Xbox 360's kernel bytecode. This is a cross-platform desktop application which allows users to plug in their proprietary hardrives, view all the content on it, and easily modify their profiles which are buried in layers of Microsoft's proprietary file formats.
+        a.github-link(href='https://github.com/hetelek/Velocity')
+          i.fab.fa-github.github-link-icon
+          | View on GitHub
         section.experience-badge-container
           .experience-badge(x-badge-content='C++')
             img.experience-badge-icon(src='./images/tech-icons/cpp.svg')

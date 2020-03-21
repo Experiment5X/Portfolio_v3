@@ -17,11 +17,16 @@ h1, h2, h3, h4, h5, h6 {
 a {
     text-decoration: none;
     color: #056ead;
+    transition: color 0.2s;
 }
 
 a:visited {
     text-decoration: none;
     color: #056ead;
+}
+
+a:hover {
+    color: #0e4b73;
 }
 
 
@@ -412,6 +417,12 @@ hr.hero-separator {
     .hero-name {
         margin-bottom: 2rem;
     }
+
+    .experience-project-block-title {
+        flex-direction: column;
+        margin-bottom: 0.4rem !important;
+    }
+
 }
 
 @media only screen and (max-height: 600px) {
@@ -572,6 +583,16 @@ hr.hero-separator {
     font-weight: bold;
     font-family: 'Comfortaa', cursive;
     margin-bottom: 0.3rem;
+}
+
+.github-link {
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.github-link-icon {
+    margin: 0 0.3rem;
 }
 
 .experience-block-paragraph {
