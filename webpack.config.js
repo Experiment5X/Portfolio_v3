@@ -18,7 +18,9 @@ const config = {
       template: `./html/index.pug`
     }),
     new CopyWebpackPlugin([
-      { from: 'misc' }
+      { from: 'misc' },
+      { from: 'images', to: 'images' },
+      { from: 'style', to: 'style' }
     ])
   ],
   module: {
@@ -26,6 +28,12 @@ const config = {
       {
         test: /\.pug$/,
         use: ["pug-loader"]
+      },
+      {
+        test: /\.(csv|tsv)$/,
+        use: [
+          'csv-loader',
+        ],
       },
     ]
   }
