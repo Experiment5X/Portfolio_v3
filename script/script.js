@@ -1,3 +1,6 @@
+import * as $ from 'jquery';
+import { setupChart } from './icon-bubble-chart';
+
 window.onscroll = (event) => {
     const heroScrollProgress = Math.min(document.body.scrollTop, window.innerHeight);
     const heroScrollPercentage = heroScrollProgress / window.innerHeight;
@@ -61,4 +64,6 @@ $(document).ready(() => {
 
     setImageSeparatorAngle();
     setProfileImageProperties();
+
+    setupChart();
 });
