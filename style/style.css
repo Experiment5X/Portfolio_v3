@@ -445,6 +445,20 @@ hr.hero-separator {
     }
 }
 
+@media only screen and (max-width: 475px) {
+    .education-header {
+        flex-direction: column;
+    }
+
+    .education-degrees {
+        margin-left: 0 !important;
+    }
+
+    .rit-logo {
+        margin-bottom: 1.5rem;
+    }
+}
+
 .hero-index {
     display: flex;
     justify-content: space-between;
@@ -670,7 +684,7 @@ hr.hero-separator {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    width: 100%;
+    flex-grow: 1;
 }
 
 .education-degree {
@@ -695,6 +709,7 @@ hr.hero-separator {
 .education-gpa {
     justify-self: end;
     align-self: center;
+    margin: 0 0.67rem;
 }
 
 .education-gpa-label {
