@@ -670,6 +670,7 @@ hr.hero-separator {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    width: 100%;
 }
 
 .education-degree {
@@ -678,14 +679,17 @@ hr.hero-separator {
     justify-content: space-between;
 }
 
-.education-degree-name {
-    margin-right: 1rem;
-}
-
 .education-degree-minor {
     margin: 0.2rem 0.75rem;
     color: #555;
     font-size: 0.8em;
+}
+
+.dots {
+    flex-grow: 1;
+    flex-basis: 0;
+    border-bottom: 2px dotted #ddd;
+    margin: 0 0.75rem;
 }
 
 .education-gpa {
