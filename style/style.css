@@ -699,7 +699,7 @@ hr.hero-separator {
 }
 
 footer {
-    background-color: #ccc;
+    background-color: #bbb;
     min-height: 20rem;
     border-top: 5px solid white;
     position: relative;
@@ -715,7 +715,7 @@ footer:before {
     height: var(--footer-icon-size);
     width: var(--footer-icon-size);
 
-    background-color: #ccc;
+    background-color: #ddd;
     border: 3px solid white;
     border-radius: 50%;
 
