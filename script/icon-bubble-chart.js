@@ -1,5 +1,6 @@
 import * as $ from 'jquery';
 import * as d3 from 'd3';
+import dataCsv from './data.csv'
 
 export const setupChart = () => {
     console.log('setting up chart')
@@ -24,7 +25,7 @@ export const setupChart = () => {
     const calcRadiusScale = () => d3.scaleSqrt().domain([20, 100]).range([size / 35 * 1.25, size / 35 * 3]);
 
     // load the data and draw the data points
-    d3.csv('/script/data.csv').then(dataPoints => {
+    d3.csv(dataCsv).then(dataPoints => {
         const updateData = (data) => {
             const circles = svg.selectAll('.language')
                 .data(data)
