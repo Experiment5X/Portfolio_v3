@@ -693,6 +693,11 @@ hr.hero-separator {
     align-self: center;
 }
 
+.education-gpa-label {
+    display: inline;
+    font-size: 0.67rem;
+}
+
 .experience-project-block-title {
     display: flex;
     justify-content: space-between;
