@@ -674,6 +674,12 @@ hr.hero-separator {
 
 .education-degree {
     margin-top: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-degree-name {
+    margin-right: 1rem;
 }
 
 .education-degree-minor {
@@ -683,7 +689,8 @@ hr.hero-separator {
 }
 
 .education-gpa {
-    float: right;
+    justify-self: end;
+    align-self: center;
 }
 
 .experience-project-block-title {
