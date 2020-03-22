@@ -49,9 +49,20 @@ function setProfileImageProperties() {
     }
 }
 
+function checkDots() {
+    const educationDegreesWidth = $('.education-degrees').width()
+    console.log('Edu width: ' + educationDegreesWidth);
+    if (educationDegreesWidth < 375) {
+        $('.dots').hide();
+    } else {
+        $('.dots').show();
+    }
+}
+
 $(window).resize((event) => {
     setImageSeparatorAngle();
     setProfileImageProperties();
+    checkDots();
 });
 
 $(document).ready(() => {
@@ -66,4 +77,5 @@ $(document).ready(() => {
     setProfileImageProperties();
 
     setupChart();
+    checkDots();
 });

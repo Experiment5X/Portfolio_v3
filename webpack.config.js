@@ -30,11 +30,17 @@ const config = {
         use: ["pug-loader"]
       },
       {
-        test: /\.(csv|tsv)$/,
+        test: /\.(txt|csv|mmdb)$/,
         use: [
-          'csv-loader',
+          {
+            loader: 'file-loader',
+            options: {
+              name: "[path][name].[ext]",
+              emitFile: true,
+            },
+          },
         ],
-      },
+      }
     ]
   }
 };
