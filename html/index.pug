@@ -51,7 +51,10 @@ head
       .content-section-title Work
     section.content-section-body
       section.experience-block
-        .experience-block-title Tesla
+        .experience-job-block-title
+          .experience-block-title Tesla
+          .experience-date-range Jan - Aug 2020
+        .experience-job-title Software Engineer Intern
         .experience-block-paragraph
           | I worked directly with product managers to create internal front-end applications using React, Typescript, and GraphQL. I gained experience using libraries including React-Table, Mapbox, styled-components, and recharts. My day-to-day consists of developing new features, fixing bugs discovered by users, and reviewing other developers' code. In addition to front-end development, I've also contributed to mathematical simulation software written Python.
         section.experience-badge-container
@@ -68,7 +71,10 @@ head
           .experience-badge(x-badge-content='git')
             img.experience-badge-icon(src='./images/tech-icons/git.svg')
       section.experience-block
-        .experience-block-title Datto
+        .experience-job-block-title
+          .experience-block-title Datto
+          .experience-date-range May - Aug 2019
+        .experience-job-title Software Engineer Intern
         .experience-block-paragraph
           | I worked on a distributed system for backing up petabytes of data consisting of a Scala, PHP, and Ruby backend with an AngularJS frontend. I developed features for a processing pipeline and fixed critical issues affecting customer backups. I extended an internal library to fetch additional information from Microsoft's O365 API, investigated a job management library which uses Redis, and was trained on Scala and Symfony. During my time there I also participated in a hackathon in which my team developed a Raspberry Pi device to detect when snack bins become empty. For this project I wrote a web application to serve the front-end and also developed code to detect QR codes at the bottom of the snack bins.
           p
@@ -84,7 +90,10 @@ head
             .experience-badge(x-badge-content='git')
               img.experience-badge-icon(src='./images/tech-icons/git.svg')
       section.experience-block
-        .experience-block-title EagleView
+        .experience-job-block-title
+          .experience-block-title EagleView
+          .experience-date-range Jan - Aug 2018
+        .experience-job-title Software Engineer Intern
         .experience-block-paragraph
           | I worked with a scrum team doing full stack web development for both customer facing applications and internal micro-services. I worked with Postgres databases, a PHP backend, a JS frontend, and HTML/CSS. Most of the projects I worked on were SPAs and written using ExtJS. We also had internal applications that I developed features for that had basic front-ends built using Bootstrap and Mustache. For example, I created a log file viewer webpage that handled arbitrarily sized files, I integrated Amazon secret manager into existing applications, and I wrote SQL queries to create test data. I also started a micro-service in Go for my team along with Jenkins jobs to test it and deploy it to kubernetes.
         section.experience-badge-container
@@ -105,7 +114,10 @@ head
           .experience-badge(x-badge-content='git')
             img.experience-badge-icon(src='./images/tech-icons/git.svg')
       section.experience-block
-        .experience-block-title Rochester Software Associates
+        .experience-job-block-title
+          .experience-block-title Rochester Software Associates
+          .experience-date-range Jan - Aug 2017
+        .experience-job-title Software Engineer Intern
         .experience-block-paragraph
           | I developed an algorithm to remove hole punch marks from scanned documents using a deep learning model that I trained myself. I gathered the training data myself by scanning several pieces of paper with a bunch of holes in them and labelling them by hand. I also implemented printer network protocols in C# after using Wireshark for analysis and integrated this into existing software. Most of the protocols were very custom to each printer, but I also implemented IPP which is a widely used standard that I learned by reading the RFCs. I worked heavily with SNMP to query printers for job information and supply levels. 
         section.experience-badge-container
@@ -216,8 +228,7 @@ head
       .content-section-title Projects
     .content-section-body
       section.experience-block
-        .experience-project-block-title
-          .experience-block-title GSC Interpreter
+        .experience-block-title GSC Interpreter
         .experience-block-paragraph
           | I wrote an interpreter for the game scripting language used in Call of Duty. My tool will act as a syntax checker, with the ability to easily run it on a directory of scripts. It also has the ability to fully interpret a subset of the language. It has support for functions, conditionals, loops, lists, and objects. My interpreter can successfully run mergesort implemented in GSC.
         a.github-link(href='https://github.com/Experiment5X/GscInterpreter')
@@ -227,8 +238,7 @@ head
           .experience-badge(x-badge-content='Haskell')
             img.experience-badge-icon(src='./images/tech-icons/haskell.svg')
       section.experience-block
-        .experience-project-block-title
-          .experience-block-title Garbage Full Detector
+        .experience-block-title Garbage Full Detector
         .experience-block-paragraph
           | I built a Raspberry Pi device to detect when my garbage is full by using a deep learning model to classify a picture that the device takes. If someone fills up the garbage without taking it out, the device will send a GIF of them filling it to everyone on a contact list. I gathered training data for this project myself, by taking hundreds of pictures of my garbage can in different conditions. I used Keras for the model, I created a basic web app in NodeJS to configure the device, and used AWS SNS to send people texts to notify them when they're full. 
         a.github-link(href='https://github.com/Experiment5X/GarbageFullDetector')
@@ -250,8 +260,7 @@ head
           .experience-badge(x-badge-content='Raspberry Pi')
             img.experience-badge-icon(src='./images/tech-icons/raspi.svg')
       section.experience-block
-        .experience-project-block-title
-          .experience-block-title Feature Map Viewer
+        .experience-block-title Feature Map Viewer
         .experience-block-paragraph
           | I created this application to visualize feature maps in VGG-16. The application allows you to upload an image and select a layer in VGG-16 to investigate. To visualize the feature map, I start off with an image of noise and perform backpropagation on the input image, continuously updating it until its feature map at the selected layer best matches the feature map of the input image. The user has control over several parameters used to re-create the visualization such as learning rate, gradient std clip, and a total variation coefficient.
         a.github-link(href='https://github.com/Experiment5X/DeepFeatureVisualizationWebApp')
@@ -269,8 +278,7 @@ head
           .experience-badge(x-badge-content='Django')
             img.experience-badge-icon(src='./images/tech-icons/django.svg')
       section.experience-block
-        .experience-project-block-title
-          .experience-block-title Velocity
+        .experience-block-title Velocity
         .experience-block-paragraph
           | I wrote an application with my friend to implement several of the propriety file systems Microsoft uses on the Xbox 360. The file system STFS has security on it to prevent modification, however we were able to bypass these measures to allow modification. To understand how these file systems worked we reverse engineered the Xbox 360's kernel bytecode. This is a cross-platform desktop application which allows users to plug in their proprietary hardrives, view all the content on it, and easily modify their profiles which are buried in layers of Microsoft's proprietary file formats.
         a.github-link(href='https://github.com/hetelek/Velocity')

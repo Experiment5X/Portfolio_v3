@@ -417,12 +417,6 @@ hr.hero-separator {
     .hero-name {
         margin-bottom: 2rem;
     }
-
-    .experience-project-block-title {
-        flex-direction: column;
-        margin-bottom: 0.4rem !important;
-    }
-
 }
 
 @media only screen and (max-height: 600px) {
@@ -597,6 +591,9 @@ hr.hero-separator {
     font-weight: bold;
     font-family: 'Comfortaa', cursive;
     margin-bottom: 0.3rem;
+
+    flex-basis: 0;
+    flex-grow: 1;
 }
 
 .github-link {
@@ -717,9 +714,19 @@ hr.hero-separator {
     font-size: 0.67rem;
 }
 
-.experience-project-block-title {
+.experience-job-block-title {
     display: flex;
     justify-content: space-between;
+}
+
+.experience-job-title {
+    font-size: 0.8rem;
+    color: #aaaaaa;
+    margin-bottom: 0.67rem;
+}
+
+.experience-date-range {
+    margin: 0;
 }
 
 footer {
